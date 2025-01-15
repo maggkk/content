@@ -7,7 +7,7 @@ browser-compat: svg.elements.polygon
 
 {{SVGRef}}
 
-The **`<polygon>`** element defines a closed shape consisting of a set of connected straight line segments. The last point is connected to the first point.
+The **`<polygon>`** [SVG](/en-US/docs/Web/SVG) element defines a closed shape consisting of a set of connected straight line segments. The last point is connected to the first point.
 
 For open shapes, see the {{SVGElement("polyline")}} element.
 
@@ -42,7 +42,7 @@ svg {
   - : This attribute lets specify the total length for the path, in user units.
     _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number) ; _Default value_: _none_; _Animatable_: **yes**
 
-## Usage notes
+## Usage context
 
 {{svginfo}}
 

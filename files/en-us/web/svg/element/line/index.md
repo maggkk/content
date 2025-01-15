@@ -7,7 +7,7 @@ browser-compat: svg.elements.line
 
 {{SVGRef}}
 
-The **`<line>`** element is an SVG basic shape used to create a line connecting two points.
+The **`<line>`** [SVG](/en-US/docs/Web/SVG) element is an SVG basic shape used to create a line connecting two points.
 
 ## Example
 
@@ -48,7 +48,7 @@ svg {
   - : Defines the total path length in user units.
     _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number) ; _Default value_: _none_; _Animatable_: **yes**
 
-## Usage notes
+## Usage context
 
 {{svginfo}}
 

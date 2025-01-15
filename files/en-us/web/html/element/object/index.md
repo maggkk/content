@@ -52,7 +52,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ```html
 <object
-  type="video/mp4"
+  type="video/webm"
   data="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
   width="600"
   height="140">
@@ -78,7 +78,7 @@ If the video in the example fails to load, the user will be provided with an ima
         <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>;
         <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>;
         <a href="/en-US/docs/Web/HTML/Content_categories#embedded_content">embedded content</a>, palpable content; if the element has a
-        <a href="/en-US/docs/Web/HTML/Element/object#usemap"><code>usemap</code></a> attribute, <a href="/en-US/docs/Web/HTML/Content_categories#interactive_content">interactive content</a>;
+        <a href="#usemap"><code>usemap</code></a> attribute, <a href="/en-US/docs/Web/HTML/Content_categories#interactive_content">interactive content</a>;
         <a href="/en-US/docs/Web/HTML/Content_categories#form_listed">listed</a>,
         <a href="/en-US/docs/Web/HTML/Content_categories#form_submittable">submittable</a>
         <a href="/en-US/docs/Web/HTML/Content_categories#form-associated_content">form-associated</a> element.

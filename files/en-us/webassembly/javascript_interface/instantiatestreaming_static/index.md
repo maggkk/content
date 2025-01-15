@@ -11,13 +11,16 @@ The **`WebAssembly.instantiateStreaming()`** static method compiles
 and instantiates a WebAssembly module directly from a streamed underlying source. This
 is the most efficient, optimized way to load Wasm code.
 
-> **Note:** Webpages that have strict [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) might block WebAssembly from compiling and executing modules.
+> [!NOTE]
+> Webpages that have strict [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) might block WebAssembly from compiling and executing modules.
 > For more information on allowing WebAssembly compilation and execution, see the [script-src CSP](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src).
 
 ## Syntax
 
 ```js-nolint
+WebAssembly.instantiateStreaming(source)
 WebAssembly.instantiateStreaming(source, importObject)
+WebAssembly.instantiateStreaming(source, importObject, compileOptions)
 ```
 
 ### Parameters
@@ -33,6 +36,12 @@ WebAssembly.instantiateStreaming(source, importObject)
     else a
     [`WebAssembly.LinkError`](/en-US/docs/WebAssembly/JavaScript_interface/LinkError)
     is thrown.
+- `compileOptions` {{optional_inline}}
+  - : An object containing compilation options. Properties can include:
+    - `builtins` {{optional_inline}}
+      - : An array of strings that enables the usage of [JavaScript builtins](/en-US/docs/WebAssembly/JavaScript_builtins) in the compiled Wasm module. The strings define the builtins you want to enable. Currently the only available value is `"js-string"`, which enables JavaScript string builtins.
+    - `importedStringConstants` {{optional_inline}}
+      - : A string specifying a namespace for [imported global string constants](/en-US/docs/WebAssembly/Imported_string_constants)s. This property needs to be specified if you wish to use imported global string constants in the Wasm module.
 
 ### Return value
 
@@ -62,11 +71,13 @@ demo on GitHub, and [view it live](https://mdn.github.io/webassembly-examples/js
 directly streams a Wasm module from an underlying source then
 compiles and instantiates it, the promise fulfilling with a `ResultObject`.
 Because the `instantiateStreaming()` function accepts a promise for a [`Response`](/en-US/docs/Web/API/Response)
-object, you can directly pass it a [`fetch()`](/en-US/docs/Web/API/fetch)
+object, you can directly pass it a [`fetch()`](/en-US/docs/Web/API/Window/fetch)
 call, and it will pass the response into the function when it fulfills.
 
 ```js
-const importObject = { imports: { imported_func: (arg) => console.log(arg) } };
+const importObject = {
+  my_namespace: { imported_func: (arg) => console.log(arg) },
+};
 
 WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
   (obj) => obj.instance.exports.exported_func(),
@@ -76,8 +87,33 @@ WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
 The `ResultObject`'s instance member is then accessed, and the contained
 exported function invoked.
 
-> **Note:** For this to work, `.wasm` files should be returned
+> [!NOTE]
+> For this to work, `.wasm` files should be returned
 > with an `application/wasm` MIME type by the server.
+
+### Enabling JavaScript builtins and global string imports
+
+This example enables JavaScript string builtins and imported global string constants when compiling and instantiating the Wasm module with `instantiateStreaming()`, before running the exported `main()` function (which logs `"hello world!"` to the console). [See it running live](https://mdn.github.io/webassembly-examples/js-builtin-examples/instantiate-streaming/).
+
+```js
+const importObject = {
+  // Regular import
+  m: {
+    log: console.log,
+  },
+};
+
+const compileOptions = {
+  builtins: ["js-string"], // Enable JavaScript string builtins
+  importedStringConstants: "string_constants", // Enable imported global string constants
+};
+
+WebAssembly.instantiateStreaming(
+  fetch("log-concat.wasm"),
+  importObject,
+  compileOptions,
+).then((result) => result.instance.exports.main());
+```
 
 ## Specifications
 

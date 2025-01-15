@@ -7,7 +7,7 @@ browser-compat: svg.elements.mask
 
 {{SVGRef}}
 
-The **`<mask>`** element defines an alpha mask for compositing the current object into the background. A mask is used/referenced using the {{SVGAttr("mask")}} property.
+The **`<mask>`** [SVG](/en-US/docs/Web/SVG) element defines an alpha mask for compositing the current object into the background. A mask is used/referenced using the {{SVGAttr("mask")}} property.
 
 ## Example
 
@@ -62,7 +62,7 @@ svg {
   - : This attribute defines the width of the masking area.
     _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length) ; _Default value_: `120%`; _Animatable_: **yes**
 
-## Usage notes
+## Usage context
 
 {{svginfo}}
 
