@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.RTCRtpReceiver.transport
 ---
 
-{{DefaultAPISidebar("WebRTC")}}
+{{APIRef("WebRTC")}}
 
 The read-only **`transport`** property of an
 {{domxref("RTCRtpReceiver")}} object provides the {{domxref("RTCDtlsTransport")}} object
@@ -15,12 +15,6 @@ Real-time Transport Control Protocol ({{Glossary("RTCP")}}) packets.
 
 This transport is responsible for receiving the data for the media on the receiver's
 {{domxref("RTCRtpReceiver.track", "track")}}.
-
-## Syntax
-
-```js-nolint
-rtcRtpReceiver.transport
-```
 
 ### Value
 

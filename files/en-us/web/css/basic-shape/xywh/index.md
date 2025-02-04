@@ -25,6 +25,10 @@ clip-path: xywh(1px 2% 3px 4em round 0 1% 2px 3em);
 - `round <'border-radius'>`
   - : Specifies the radius of the rounded corners of the rectangle using the same syntax as the CSS [`border-radius`](/en-US/docs/Web/CSS/border-radius) shorthand property. This parameter is optional.
 
+## Formal syntax
+
+{{CSSSyntax}}
+
 ## Examples
 
 ### Creating offset-path using xywh()
@@ -96,8 +100,8 @@ In the example below, the {{cssxref("offset-path")}} property uses the `xywh()` 
 
 ## See also
 
-- [`inset()`](/en-US/docs/Web/CSS/basic-shape#inset) function
-- [`rect()`](/en-US/docs/Web/CSS/basic-shape#rect) function
+- {{cssxref("basic-shape/inset","inset()")}} function
+- {{cssxref("basic-shape/rect","rect()")}} function
 - {{cssxref("clip-path")}} property
 - {{cssxref("offset-path")}} property
 - {{cssxref("&lt;basic-shape&gt;")}} data type

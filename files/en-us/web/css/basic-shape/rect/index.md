@@ -31,6 +31,10 @@ The inset rectangle is defined by specifying four offset values, starting with t
 - `round <'border-radius'>`
   - : Specifies the radius of the rounded corners of the rectangle using the same syntax as the CSS [`border-radius`](/en-US/docs/Web/CSS/border-radius) shorthand property. This parameter is optional.
 
+## Formal syntax
+
+{{CSSSyntax}}
+
 ## Examples
 
 ### Creating offset-path using rect()
@@ -111,8 +115,8 @@ In this example, the {{cssxref("offset-path")}} property uses the `rect()` funct
 
 ## See also
 
-- [`inset()`](/en-US/docs/Web/CSS/basic-shape#inset) function
-- [`xywh()`](/en-US/docs/Web/CSS/basic-shape#xywh) function
+- {{cssxref("basic-shape/inset","inset()")}} function
+- {{cssxref("basic-shape/xywh","xywh()")}} function
 - {{cssxref("clip-path")}} property
 - {{cssxref("offset-path")}} property
 - {{cssxref("&lt;basic-shape&gt;")}} data type

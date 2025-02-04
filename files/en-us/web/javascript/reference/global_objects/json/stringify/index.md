@@ -66,7 +66,7 @@ A JSON string representing the given value, or undefined.
     - if it is in an array, the index in the array, as a string
     - if `JSON.stringify()` was directly called on this object, an empty string
 
-    {{jsxref("Date")}} objects implement the [`toJSON()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toJSON) method which returns a string (the same as [`date.toISOString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString)). Thus, they will be stringified as strings.
+    All {{jsxref("Temporal")}} objects implement the `toJSON()` method, which returns a string (the same as calling `toString()`). Thus, they will be serialized as strings. Similarly, {{jsxref("Date")}} objects implement `toJSON()`, which returns the same as [`toISOString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString).
 
   - Only [enumerable own properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) are visited. This means {{jsxref("Map")}}, {{jsxref("Set")}}, etc. will become `"{}"`. You can use the [`replacer`](#the_replacer_parameter) parameter to serialize them to something more useful.
 
@@ -86,7 +86,8 @@ The `replacer` function is called for the initial object being stringified as we
 - If you return a {{jsxref("Function")}}, {{jsxref("Symbol")}}, or {{jsxref("undefined")}}, the property is not included in the output.
 - If you return any other object, the object is recursively stringified, calling the `replacer` function on each property.
 
-> **Note:** When parsing JSON generated with `replacer` functions, you would likely want to use the [`reviver`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#using_the_reviver_parameter) parameter to perform the reverse operation.
+> [!NOTE]
+> When parsing JSON generated with `replacer` functions, you would likely want to use the [`reviver`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#using_the_reviver_parameter) parameter to perform the reverse operation.
 
 Typically, array elements' index would never shift (even when the element is an invalid value like a function, it will become `null` instead of omitted). Using the `replacer` function allows you to control the order of the array elements by returning a different array.
 
@@ -314,7 +315,7 @@ JSON.stringify(circularReference);
 
 To serialize circular references, you can use a library that supports them (e.g. [cycle.js](https://github.com/douglascrockford/JSON-js/blob/master/cycle.js) by Douglas Crockford) or implement a solution yourself, which will require finding and replacing (or removing) the cyclic references by serializable values.
 
-If you are using `JSON.stringify()` to deep-copy an object, you may instead want to use [`structuredClone()`](/en-US/docs/Web/API/structuredClone), which supports circular references. JavaScript engine APIs for binary serialization, such as [`v8.serialize()`](https://nodejs.org/api/v8.html#v8serializevalue), also support circular references.
+If you are using `JSON.stringify()` to deep-copy an object, you may instead want to use {{DOMxRef("Window.structuredClone", "structuredClone()")}}, which supports circular references. JavaScript engine APIs for binary serialization, such as [`v8.serialize()`](https://nodejs.org/api/v8.html#v8serializevalue), also support circular references.
 
 ### Using JSON.stringify() with localStorage
 

@@ -3,7 +3,7 @@ title: "MediaTrackSupportedConstraints: logicalSurface property"
 short-title: logicalSurface
 slug: Web/API/MediaTrackSupportedConstraints/logicalSurface
 page-type: web-api-instance-property
-browser-compat: api.MediaTrackSupportedConstraints.logicalSurface
+browser-compat: api.MediaStreamTrack.applyConstraints.logicalSurface_constraint
 ---
 
 {{APIRef("Media Capture and Streams")}}
@@ -11,12 +11,6 @@ browser-compat: api.MediaTrackSupportedConstraints.logicalSurface
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's **`logicalSurface`** property indicates whether or not the {{domxref("MediaTrackConstraints.logicalSurface", "logicalSurface")}} constraint is supported by the user agent and the device on which the content is being used.
 
 The supported constraints list is obtained by calling {{domxref("MediaDevices.getSupportedConstraints","navigator.mediaDevices.getSupportedConstraints()")}}.
-
-## Syntax
-
-```js-nolint
-isLogicalSurfaceSupported = supportedConstraints.logicalSurface
-```
 
 ### Value
 

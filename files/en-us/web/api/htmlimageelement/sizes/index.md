@@ -43,7 +43,8 @@ absolute units (such as `px` or `cm`), or the `vw`
 unit, which lets you specify the width as a percentage of the viewport width
 (`1vw` being 1% of the viewport width).
 
-> **Note:** The source size value must _not_ be specified as a
+> [!NOTE]
+> The source size value must _not_ be specified as a
 > percentage of the container size; that is, lengths such as `50%` or
 > `100%` are not allowed, as there would be uncertainty as to what the
 > specified value is a percentage of.
@@ -127,7 +128,7 @@ article img {
 
 The JavaScript code handles the two buttons that let you toggle the third width option
 between 40em and 50em; this is done by handling the {{domxref("Element.click_event", "click")}}
-event, using the JavaScript string object {{jsxref("String.replace", "replace()")}} method to replace the relevant portion of the `sizes` string.
+event, using the JavaScript string {{jsxref("String.replace", "replace()")}} method to replace the relevant portion of the `sizes` string.
 
 ```js
 const image = document.querySelector("article img");
@@ -163,6 +164,6 @@ The page is best {{LiveSampleLink('Selecting an image to fit window width', 'vie
 
 - [Media queries](/en-US/docs/Web/CSS/CSS_media_queries)
 - [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+- [HTML images](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images)
+- [Responsive images](/en-US/docs/Web/HTML/Responsive_images)
 - [Using the `srcset` and `sizes` attributes](/en-US/docs/Web/HTML/Element/img#using_the_srcset_and_sizes_attributes)
