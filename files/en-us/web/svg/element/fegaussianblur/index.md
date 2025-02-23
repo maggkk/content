@@ -9,6 +9,8 @@ browser-compat: svg.elements.feGaussianBlur
 
 The **`<feGaussianBlur>`** [SVG](/en-US/docs/Web/SVG) filter primitive blurs the input image by the amount specified in {{SVGAttr("stdDeviation")}}, which defines the bell-curve.
 
+Like other filter primitives, it handles color components in the `linearRGB` {{glossary("color space")}} by default. You can use {{svgattr("color-interpolation-filters")}} to use `sRGB` instead.
+
 ## Usage context
 
 {{svginfo}}
@@ -25,7 +27,7 @@ This element implements the {{domxref("SVGFEGaussianBlurElement")}} interface.
 
 ## Example
 
-### Simple example
+### Basic example
 
 #### SVG
 
@@ -47,7 +49,7 @@ This element implements the {{domxref("SVGFEGaussianBlurElement")}} interface.
 
 #### Result
 
-{{EmbedLiveSample("Simple_example", "", "130")}}
+{{EmbedLiveSample("Basic_example", "", "130")}}
 
 ### Drop shadow example
 

@@ -7,9 +7,10 @@ browser-compat: svg.elements.feColorMatrix
 
 {{SVGRef}}
 
-The **`<feColorMatrix>`** SVG filter element changes colors based on a transformation matrix. Every pixel's color value `[R,G,B,A]` is [matrix multiplied](https://en.wikipedia.org/wiki/Matrix_multiplication) by a 5 by 5 color matrix to create new color `[R',G',B',A']`.
+The **`<feColorMatrix>`** [SVG](/en-US/docs/Web/SVG) filter element changes colors based on a transformation matrix. Every pixel's color value `[R,G,B,A]` is [matrix multiplied](https://en.wikipedia.org/wiki/Matrix_multiplication) by a 5 by 5 color matrix to create new color `[R',G',B',A']`.
 
-> **Note:** The prime symbol **`'`** is used in mathematics indicate the result of a transformation.
+> [!NOTE]
+> The prime symbol **`'`** is used in mathematics indicate the result of a transformation.
 
 ```plain
 | R' |     | r1 r2 r3 r4 r5 |   | R |
@@ -58,6 +59,8 @@ A' | 0 0 0 1 0 |
 ```
 
 In it, every new value is exactly 1 times its old value, with nothing else added. It is recommended to start manipulating the matrix from here.
+
+Like other filter primitives, it handles color components in the `linearRGB` {{glossary("color space")}} by default. You can use {{svgattr("color-interpolation-filters")}} to use `sRGB` instead.
 
 ## Usage context
 

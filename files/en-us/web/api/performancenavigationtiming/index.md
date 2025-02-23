@@ -15,7 +15,7 @@ Only the current document is included in the performance timeline, so there is o
 
 The following diagram shows all of the timestamp properties defined in `PerformanceNavigationTiming`.
 
-![Timestamp diagram listing timestamps in the order in which they are recorded for the fetching of a document](timestamp-diagram.svg)
+![Timestamp diagram listing timestamps in the order in which they are recorded for the fetching of a document](https://mdn.github.io/shared-assets/images/diagrams/api/performance/timestamp-diagram.svg)
 
 ## Instance properties
 
@@ -25,8 +25,9 @@ This interface extends the following {{domxref('PerformanceEntry')}} properties 
   - : Returns `"navigation"`.
 - {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}}
   - : Returns the [document's URL](/en-US/docs/Web/API/Document/URL).
+    Note that [text fragments](/en-US/docs/Web/URI/Reference/Fragment/Text_fragments), and any other fragment directives, are stripped from the URL.
 - {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("DOMHighResTimeStamp")}} with a value of "`0`".
+  - : Returns a {{domxref("DOMHighResTimeStamp")}} with a value of `0`.
 - {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("DOMHighResTimeStamp","timestamp")}} that is the difference between the {{domxref("PerformanceNavigationTiming.loadEventEnd")}} and {{domxref("PerformanceEntry.startTime")}} properties.
 
@@ -53,6 +54,8 @@ The interface also supports the following properties:
   - : A {{domxref("DOMHighResTimeStamp")}} representing the time immediately after the current document's [`load`](/en-US/docs/Web/API/Window/load_event) event handler completes.
 - {{domxref('PerformanceNavigationTiming.loadEventStart')}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} representing the time immediately before the current document's [`load`](/en-US/docs/Web/API/Window/load_event) event handler starts.
+- {{domxref('PerformanceNavigationTiming.notRestoredReasons')}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : A {{domxref("NotRestoredReasons")}} object providing report data on reasons why the current document was blocked from using the back/forward cache ({{Glossary("bfcache")}}) on navigation.
 - {{domxref('PerformanceNavigationTiming.redirectCount')}} {{ReadOnlyInline}}
   - : A number representing the number of redirects since the last non-redirect navigation in the current browsing context.
 - {{domxref('PerformanceNavigationTiming.type')}} {{ReadOnlyInline}}
