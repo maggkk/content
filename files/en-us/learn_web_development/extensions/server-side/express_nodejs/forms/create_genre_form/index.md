@@ -59,24 +59,23 @@ exports.genre_create_post = [
       // There are errors. Render the form again with sanitized values/error messages.
       res.render("genre_form", {
         title: "Create Genre",
-        genre: genre,
+        genre,
         errors: errors.array(),
       });
       return;
+    }
+    // Data from form is valid.
+    // Check if Genre with same name already exists.
+    const genreExists = await Genre.findOne({ name: req.body.name })
+      .collation({ locale: "en", strength: 2 })
+      .exec();
+    if (genreExists) {
+      // Genre exists, redirect to its detail page.
+      res.redirect(genreExists.url);
     } else {
-      // Data from form is valid.
-      // Check if Genre with same name already exists.
-      const genreExists = await Genre.findOne({ name: req.body.name })
-        .collation({ locale: "en", strength: 2 })
-        .exec();
-      if (genreExists) {
-        // Genre exists, redirect to its detail page.
-        res.redirect(genreExists.url);
-      } else {
-        await genre.save();
-        // New genre saved. Redirect to genre detail page.
-        res.redirect(genre.url);
-      }
+      await genre.save();
+      // New genre saved. Redirect to genre detail page.
+      res.redirect(genre.url);
     }
   }),
 ];
@@ -116,14 +115,13 @@ asyncHandler(async (req, res, next) => {
     // There are errors. Render the form again with sanitized values/error messages.
     res.render("genre_form", {
       title: "Create Genre",
-      genre: genre,
+      genre,
       errors: errors.array(),
     });
     return;
-  } else {
-    // Data from form is valid.
-    // …
   }
+  // Data from form is valid.
+  // …
 });
 ```
 

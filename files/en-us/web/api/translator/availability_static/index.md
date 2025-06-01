@@ -3,10 +3,12 @@ title: "Translator: availability() static method"
 short-title: availability()
 slug: Web/API/Translator/availability_static
 page-type: web-api-static-method
+status:
+  - experimental
 browser-compat: api.Translator.availability_static
 ---
 
-{{APIRef("Translator and Language Detector APIs")}}{{securecontext_header}}
+{{APIRef("Translator and Language Detector APIs")}}{{securecontext_header}}{{SeeCompatTable}}
 
 The **`availability()`** static method of the {{domxref("Translator")}} interface returns an enumerated value that indicates the availability of the AI model for the given `Translator` configuration.
 
@@ -36,7 +38,7 @@ Possible values include:
 - `available`
   - : The browser supports the given configuration and it can be used immediately.
 - `downloadable`
-  - : The browser supports the given configuration, but it first needs to download an AI model, or some fune-tuning data for the model.
+  - : The browser supports the given configuration, but it first needs to download an AI model, or some fine-tuning data for the model.
 - `downloading`
   - : The browser supports the given configuration, but it has to finish an ongoing download before it can proceed.
 - `unavailable`
@@ -64,33 +66,31 @@ In the following snippet, we start by checking the availability of the model for
 - If it returns a different value (that is, `downloadable` or `downloading`), we run the same `create()` method call, but this time we include a `monitor` that logs the percentage of the model downloaded each time the {{domxref("CreateMonitor/downloadprogress_event", "downloadprogress")}} event fires.
 
 ```js
-const availability = await Translator.availability({
-  sourceLanguage: "en",
-  targetLanguage: "ja",
-});
-let translator;
+async function getTranslator(languages) {
+  const availability = await Translator.availability(languages);
 
-if (availability === "unavailable") {
-  console.log(
-    `Translation not supported; try a different language combination.`,
-  );
-  return;
-} else if (availability === "available") {
-  translator = await Translator.create({
-    sourceLanguage: "en",
-    targetLanguage: "ja",
-  });
-} else {
-  translator = await Translator.create({
-    sourceLanguage: "en",
-    targetLanguage: "ja",
-    monitor: (monitor) => {
+  if (availability === "unavailable") {
+    console.log(
+      `Translation not supported; try a different language combination.`,
+    );
+    return undefined;
+  } else if (availability === "available") {
+    return await Translator.create(languages);
+  }
+  return await Translator.create({
+    ...languages,
+    monitor(monitor) {
       monitor.addEventListener("downloadprogress", (e) => {
         console.log(`Downloaded ${Math.floor(e.loaded * 100)}%`);
       });
     },
   });
 }
+
+const translator = await getTranslator({
+  sourceLanguage: "en",
+  targetLanguage: "ja",
+});
 ```
 
 ### Detecting language support
