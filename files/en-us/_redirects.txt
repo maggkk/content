@@ -5473,7 +5473,7 @@
 /en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies	/en-US/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies
 /en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images	/en-US/docs/Web/HTML/Guides/Responsive_images
 /en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content	/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio
-/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding	/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Multimedia_and_embedding
+/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding	/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video
 /en-US/docs/Learn/HTML/Tables	/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics
 /en-US/docs/Learn/HTML/Tables/Advanced	/en-US/docs/Learn_web_development/Core/Structuring_content/Table_accessibility
 /en-US/docs/Learn/HTML/Tables/Basics	/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics
@@ -5784,7 +5784,8 @@
 /en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images/Test_your_skills	/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Images
 /en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images/Test_your_skills:_HTML_images	/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Images
 /en-US/docs/Learn_web_development/Core/Structuring_content/HTML_text_fundamentals	/en-US/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs
-/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio/Test_your_skills:_Multimedia_and_embedding	/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Multimedia_and_embedding
+/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio/Test_your_skills:_Multimedia_and_embedding	/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video
+/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Multimedia_and_embedding	/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video
 /en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_Advanced_HTML_text	/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Advanced_HTML_text
 /en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_HTML_text_basics	/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics
 /en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_Links	/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Links
@@ -5825,6 +5826,8 @@
 /en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_HTML5_controls	/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Input_types
 /en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Other_controls	/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Other_controls
 /en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Styling_basics	/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Styling_basics
+/en-US/docs/Learn_web_development/Extensions/Security_privacy	/en-US/docs/Web/Security
+/en-US/docs/Learn_web_development/Extensions/Transform_animate	/en-US/docs/Learn_web_development/Extensions
 /en-US/docs/Learn_web_development/Getting_started/Basic_setup	/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software
 /en-US/docs/Learn_web_development/Getting_started/Soft_skills/Job_interviews	/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Finding_a_job
 /en-US/docs/Learn_web_development/Getting_started/Soft_skills/Learning_and_getting_help	/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning
@@ -10152,6 +10155,7 @@
 /en-US/docs/Web/API/SVGTRefElement	/en-US/docs/Web/API/SVGElement
 /en-US/docs/Web/API/SVGURIReference	/en-US/docs/Web/SVG/Reference/Attribute/href
 /en-US/docs/Web/API/SVGVKernElement	/en-US/docs/Web/API/SVGElement
+/en-US/docs/Web/API/Sanitizer/sanitize	/en-US/docs/Web/API/Sanitizer
 /en-US/docs/Web/API/Screen.availHeight	/en-US/docs/Web/API/Screen/availHeight
 /en-US/docs/Web/API/Screen.availLeft	/en-US/docs/Web/API/ScreenDetailed/availLeft
 /en-US/docs/Web/API/Screen.availTop	/en-US/docs/Web/API/ScreenDetailed/availTop
@@ -12319,8 +12323,8 @@
 /en-US/docs/Web/CSS/clamp()	/en-US/docs/Web/CSS/clamp
 /en-US/docs/Web/CSS/color-adjust	/en-US/docs/Web/CSS/print-color-adjust
 /en-US/docs/Web/CSS/color_value/color()	/en-US/docs/Web/CSS/color_value/color
-/en-US/docs/Web/CSS/color_value/color-contrast	/en-US/docs/Web/CSS/color_value
-/en-US/docs/Web/CSS/color_value/color-contrast()	/en-US/docs/Web/CSS/color_value
+/en-US/docs/Web/CSS/color_value/color-contrast	/en-US/docs/Web/CSS/color_value/contrast-color
+/en-US/docs/Web/CSS/color_value/color-contrast()	/en-US/docs/Web/CSS/color_value/contrast-color
 /en-US/docs/Web/CSS/color_value/color-mix()	/en-US/docs/Web/CSS/color_value/color-mix
 /en-US/docs/Web/CSS/color_value/color_keywords	/en-US/docs/Web/CSS/named-color
 /en-US/docs/Web/CSS/color_value/device-cmyk()	/en-US/docs/Web/CSS/color_value/device-cmyk
@@ -14776,7 +14780,7 @@
 /en-US/docs/Web/SVG/Element/cursor	/en-US/docs/Web/CSS/cursor
 /en-US/docs/Web/SVG/Element/defs	/en-US/docs/Web/SVG/Reference/Element/defs
 /en-US/docs/Web/SVG/Element/desc	/en-US/docs/Web/SVG/Reference/Element/desc
-/en-US/docs/Web/SVG/Element/discard	/en-US/docs/Web/SVG/Reference/Element/discard
+/en-US/docs/Web/SVG/Element/discard	/en-US/docs/Web/SVG/Reference/Element
 /en-US/docs/Web/SVG/Element/ellipse	/en-US/docs/Web/SVG/Reference/Element/ellipse
 /en-US/docs/Web/SVG/Element/feBlend	/en-US/docs/Web/SVG/Reference/Element/feBlend
 /en-US/docs/Web/SVG/Element/feColorMatrix	/en-US/docs/Web/SVG/Reference/Element/feColorMatrix
@@ -14892,6 +14896,7 @@
 /en-US/docs/Web/SVG/Reference/Attribute/widths	/en-US/docs/Web/SVG/Reference/Attribute
 /en-US/docs/Web/SVG/Reference/Attribute/x-height	/en-US/docs/Web/SVG/Reference/Attribute
 /en-US/docs/Web/SVG/Reference/Element/cursor	/en-US/docs/Web/CSS/cursor
+/en-US/docs/Web/SVG/Reference/Element/discard	/en-US/docs/Web/SVG/Reference/Element
 /en-US/docs/Web/SVG/Reference/Element/font	/en-US/docs/Web/CSS/@font-face
 /en-US/docs/Web/SVG/Reference/Element/font-face	/en-US/docs/Web/CSS/@font-face
 /en-US/docs/Web/SVG/Reference/Element/font-face-format	/en-US/docs/Web/CSS/@font-face
@@ -14979,10 +14984,13 @@
 /en-US/docs/Web/Security/Do_not_track_field_guide/Tutorials/Additional_resources	/en-US/docs/Web/HTTP/Reference/Headers/DNT
 /en-US/docs/Web/Security/HTTP_strict_transport_security	/en-US/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security
 /en-US/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content	/en-US/docs/Web/Security/Mixed_content#developer_console
+/en-US/docs/Web/Security/Practical_implementation_guides/CSRF_prevention	/en-US/docs/Web/Security/Attacks/CSRF
+/en-US/docs/Web/Security/Practical_implementation_guides/Clickjacking	/en-US/docs/Web/Security/Attacks/Clickjacking
 /en-US/docs/Web/Security/Public_Key_Pinning	/en-US/docs/Web/Security/Certificate_Transparency
 /en-US/docs/Web/Security/Securing_your_site	/en-US/docs/Web/Security/Practical_implementation_guides
 /en-US/docs/Web/Security/Securing_your_site/Configuring_server_MIME_types	/en-US/docs/Learn_web_development/Extensions/Server-side/Configuring_server_MIME_types
 /en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion	/en-US/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
+/en-US/docs/Web/Security/Types_of_attacks	/en-US/docs/Web/Security/Attacks
 /en-US/docs/Web/Text_fragments	/en-US/docs/Web/URI/Reference/Fragment/Text_fragments
 /en-US/docs/Web/Tutorials	/en-US/docs/MDN/Tutorials
 /en-US/docs/Web/URI/Authority	/en-US/docs/Web/URI/Reference/Authority

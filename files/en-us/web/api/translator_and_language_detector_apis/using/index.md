@@ -78,7 +78,7 @@ This returns a string containing the translation.
 There is also a streaming version of the `translate()` method available — {{domxref("Translator.translateStreaming()")}} — that allows you to return the translation as a {{domxref("ReadableStream")}}. This can be useful when translating very large bodies of text:
 
 ```js
-const stream = translator.translateStreaming((myTextString);
+const stream = translator.translateStreaming(myTextString);
 let translation = "";
 
 for await (const chunk of stream) {
@@ -104,7 +104,7 @@ const translatorAvailability = await Translator.availability({
 });
 ```
 
-These methods return an emumerated value indicating whether support is, or will be available for the specified set of options:
+These methods return an enumerated value indicating whether support is, or will be available for the specified set of options:
 
 - `downloadable` means that the implementation supports the requested options, but needs to download a model or some fine-tuning data.
 - `downloading` means that the implementation supports the requested options, but needs to finish an ongoing download.
@@ -152,7 +152,7 @@ You can use this event to expose loading progress data:
 translator = await Translator.create({
   sourceLanguage: "en",
   targetLanguage: "ja",
-  monitor: (monitor) => {
+  monitor(monitor) {
     monitor.addEventListener("downloadprogress", (e) => {
       console.log(`Downloaded ${Math.floor(e.loaded * 100)}%`);
     });
@@ -313,7 +313,7 @@ Finally, we set the submit button to not be disabled, so the form can be submitt
 async function detectLanguage() {
   if (textarea.value.length > 20) {
     const detector = await LanguageDetector.create({
-      monitor: (monitor) => {
+      monitor(monitor) {
         monitor.addEventListener("downloadprogress", (e) => {
           console.log(`Downloaded ${e.loaded * 100}%`);
         });
@@ -378,7 +378,7 @@ If the test passes, we open a [`try { ... }`](/en-US/docs/Web/JavaScript/Referen
       translator = await Translator.create({
         sourceLanguage: detectedLanguage,
         targetLanguage: formData.get("translateLanguage"),
-        monitor: (monitor) => {
+        monitor(monitor) {
           monitor.addEventListener("downloadprogress", (e) => {
             translateOutput.textContent = `Downloaded ${Math.floor(
               e.loaded * 100
@@ -425,7 +425,7 @@ textarea.addEventListener("input", detectLanguage);
 async function detectLanguage() {
   if (textarea.value.length > 20) {
     const detector = await LanguageDetector.create({
-      monitor: (monitor) => {
+      monitor(monitor) {
         monitor.addEventListener("downloadprogress", (e) => {
           console.log(`Downloaded ${e.loaded * 100}%`);
         });
@@ -455,9 +455,8 @@ async function handleTranslation(e) {
   if (formData.get("translateLanguage") === detectedLanguage) {
     translateOutput.innerHTML = `<span class="error">Input language and translation language are the same.</span>`;
     return;
-  } else {
-    translateOutput.innerHTML = "";
   }
+  translateOutput.innerHTML = "";
 
   try {
     const availability = await Translator.availability({
@@ -469,7 +468,8 @@ async function handleTranslation(e) {
     if (availability === "unavailable") {
       translateOutput.innerHTML = `<span class="error">Translation not available; try a different language combination.</span>`;
       return;
-    } else if (availability === "available") {
+    }
+    if (availability === "available") {
       translator = await Translator.create({
         sourceLanguage: detectedLanguage,
         targetLanguage: formData.get("translateLanguage"),
@@ -478,7 +478,7 @@ async function handleTranslation(e) {
       translator = await Translator.create({
         sourceLanguage: detectedLanguage,
         targetLanguage: formData.get("translateLanguage"),
-        monitor: (monitor) => {
+        monitor(monitor) {
           monitor.addEventListener("downloadprogress", (e) => {
             translateOutput.textContent = `Downloaded ${Math.floor(
               e.loaded * 100,

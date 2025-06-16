@@ -1940,6 +1940,10 @@
       "inh": "",
       "impl": []
     },
+    "IntegrityPolicyViolationReportBody": {
+      "inh": "ReportBody",
+      "impl": []
+    },
     "InterestGroupBiddingAndScoringScriptRunnerGlobalScope": {
       "inh": "InterestGroupScriptRunnerGlobalScope",
       "impl": []
@@ -2646,6 +2650,10 @@
     },
     "PointerEvent": {
       "inh": "MouseEvent",
+      "impl": []
+    },
+    "PointerTimeline": {
+      "inh": "AnimationTimeline",
       "impl": []
     },
     "PopStateEvent": {
